@@ -1,0 +1,22 @@
+{% load socialaccount static %}
+
+<html>
+  <head>
+    <title>Google Login</title>
+  </head>
+  <body>
+  <h1>Web - лабараторная 2</h1>
+  {% if user.is_authenticated %}
+
+  <p>Добро пожаловать, <i><b>{{ user.first_name }} {{ user.last_name }}</i></b>!</p>
+  <img src="{% static 'oauth/images/tenor.gif' %}" alt="pug!"/>
+  <br>
+  <a href="accounts/logout">Выйти из аккаунта</a>
+ 
+  {% else %}
+  <h3>Вы не зарегестрированы</h3>
+  <a href="{% provider_login_url 'google' %}">Зайти с аккаунтом Google</a>
+  {% endif %}
+
+  </body>
+</html>
