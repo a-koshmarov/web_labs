@@ -1,5 +1,4 @@
 # Web development labs
----
 ## Lab 2 - OAuth authorization
 ### Requirments
 - Python 3
